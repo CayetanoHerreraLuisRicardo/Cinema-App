@@ -1,0 +1,29 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!-- MenuGridPhoto -->
+    <DataTemplate x:Key="TORRENTList">
+        <GridView Width="360" ItemsSource="{Binding Items}"  SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True"  commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ItemTemplate="{StaticResource TORRENTItem}" HorizontalAlignment="Left"/>
+    </DataTemplate>
+
+    <!-- MenuGridPhoto Item -->
+    <DataTemplate x:Key="TORRENTItem">
+        <Grid Height="160" Width="160" Margin="0,0,12,12" Style="{StaticResource BoxGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Margin="12" Source="{Binding Icon}" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Margin="5" Style="{StaticResource BoxSubtitleStyle}" Text="{Binding Title}" MaxLines="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>

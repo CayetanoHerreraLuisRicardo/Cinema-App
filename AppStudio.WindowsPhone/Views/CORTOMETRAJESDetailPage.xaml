@@ -1,0 +1,44 @@
+<Page
+    x:Class="AppStudio.Views.CORTOMETRAJESDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStudio.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationCacheMode="Required"
+    xmlns:vm="using:AppStudio.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource AppBackground}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <FlipView x:Name="Flip" Grid.Row="0" Margin="0,24,0,0" AutomationProperties.AutomationId="ItemsFlipView" AutomationProperties.Name="Item Details" TabIndex="1"
+                  DataContext="{Binding CORTOMETRAJESModel}"
+                  d:DataContext="{d:DesignData Source=/Assets/Data/CORTOMETRAJESDataSource.json, Type=vm:CORTOMETRAJESViewModel, IsDesignTimeCreatable=true}"
+                  ItemsSource="{Binding Items}"
+                  ItemTemplate="{StaticResource CORTOMETRAJES1DetailDetail}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                  ItemContainerStyle="{StaticResource FlipItemStyle}">
+        </FlipView>
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Visibility="{Binding CORTOMETRAJESModel.AppBarVisibility}" Background="{StaticResource AppBarBackground}" Foreground="{StaticResource AppBarForeground}">
+            <AppBarButton x:Uid="TextToSpeechButton" Icon="Volume" DataContext="{Binding CORTOMETRAJESModel}" Command="{Binding TextToSpeechCommand}" Visibility="{Binding TextToSpeechVisibility}"/>
+            <AppBarButton x:Uid="RefreshButton" Icon="Refresh" DataContext="{Binding CORTOMETRAJESModel}" Command="{Binding RefreshCommand}" Visibility="{Binding RefreshVisibility}"/>
+            <AppBarButton x:Uid="GoToSourceButton" Icon="Globe" DataContext="{Binding CORTOMETRAJESModel}" Command="{Binding GoToSourceCommand}" Visibility="{Binding GoToSourceVisibility}"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="ShareItemButton" Label="share item" Visibility="{Binding ShareItemVisibility}" DataContext="{Binding CORTOMETRAJESModel}" Command="{Binding ShareItemCommand}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

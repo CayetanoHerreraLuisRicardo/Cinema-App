@@ -1,0 +1,10 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "TodoCVCD",
+      "Icon": "/Assets/DataImages/ModuleLogo-1.png",
+      "Target": "TodoCVCDPage"
+    }
+  ]
+}

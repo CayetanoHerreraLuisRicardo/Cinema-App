@@ -1,0 +1,65 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!-- ListPhotoLeftDescription -->
+    <DataTemplate x:Key="CONTACTOList">
+        <Grid>
+            <ListView ItemsSource="{Binding Items}"  SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True"  commands:ItemClickCommand.Command="{Binding ItemClickCommand}" 
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      ItemTemplate="{StaticResource CONTACTOItem}"/>
+            <ProgressBar Height="40" VerticalAlignment="Top" IsIndeterminate="True" Visibility="{Binding ProgressBarVisibility}" />
+        </Grid>
+    </DataTemplate>
+
+    <!-- ListPhotoLeftDescription Item -->
+    <DataTemplate x:Key="CONTACTOItem">    
+        <Grid Height="180" Margin="0,0,0,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="{Binding APLICACION}" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Grid Grid.Column="1" Margin="16,-7,16,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Style="{StaticResource TitleStyle}" Text="{Binding NOMBRE}" MaxLines="2" />
+                    <TextBlock Grid.Row="1" Style="{StaticResource SubtitleStyle}" Text="{Binding AUTOR}"/>
+                </Grid>
+            </Grid>                                  
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Margin="0, 5, 12, 0" Style="{StaticResource DescriptionStyle}" Text=""/> 
+        </Grid>
+    </DataTemplate>
+
+
+    <!-- DetailMultiColumn -->
+    <DataTemplate x:Key="CONTACTO1DetailDetail">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" ZoomMode="Disabled">
+            <StackPanel>
+                <TextBlock Text="{Binding AUTOR}" Style="{StaticResource PageTitleStyle}"/>
+                <Button Margin="0,12,0,0" Style="{StaticResource ImageButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Command="{Binding Source={StaticResource ActionCommands}, Path=ShowImage}" CommandParameter="{Binding APLICACION}">
+                    <Viewbox StretchDirection="DownOnly">
+                        <Image Source="{Binding APLICACION}" Stretch="UniformToFill"/>
+                    </Viewbox>
+                </Button>
+                <Button Margin="0,12,0,0" VerticalAlignment="Top" Style="{StaticResource TitleMailActionButton}"
+                        Command="{Binding Source={StaticResource ActionCommands}, Path=MailTo}" CommandParameter="{Binding EMAIL}"
+                        Content="{Binding EMAIL}" />
+                <Button Margin="0,12,0,0" VerticalAlignment="Top" Style="{StaticResource DescriptionUrlActionButton}"
+                        Command="{Binding Source={StaticResource ActionCommands}, Path=NavigateToUrl}" CommandParameter="{Binding SITIOWEB}"
+                        Content="{Binding SITIOWEB}" />
+            </StackPanel>
+        </ScrollViewer>
+    </DataTemplate>
+</ResourceDictionary>

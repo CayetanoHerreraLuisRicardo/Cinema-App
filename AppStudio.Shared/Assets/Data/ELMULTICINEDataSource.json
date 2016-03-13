@@ -1,0 +1,40 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "GENERAL",
+      "Icon": "/Assets/DataImages/ModuleLogo-16.png",
+      "Target": "GENERALPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "ACTUALIDAD",
+      "Icon": "/Assets/DataImages/ModuleLogo-17.png",
+      "Target": "ACTUALIDADPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "FESTIVALES",
+      "Icon": "/Assets/DataImages/ModuleLogo-18.png",
+      "Target": "FESTIVALESPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "CORTOMETRAJES",
+      "Icon": "/Assets/DataImages/ModuleLogo-19.png",
+      "Target": "CORTOMETRAJESPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "ESTRENOS",
+      "Icon": "/Assets/DataImages/ModuleLogo-20.png",
+      "Target": "ESTRENOSPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "CRITICAS",
+      "Icon": "/Assets/DataImages/ModuleLogo-21.png",
+      "Target": "CRITICASPage"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!-- MenuGridPhoto -->
+    <DataTemplate x:Key="HOYList">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemTemplate="{StaticResource HOYItem}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="HOYListSnapped">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ItemTemplate="{StaticResource HOYItemSnapped}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+    </DataTemplate>
+
+    <!-- MenuGridPhoto Item -->
+    <DataTemplate x:Key="HOYItem">
+        <Grid Width="170" Height="165" Style="{StaticResource BoxGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Margin="5" Source="{Binding Icon}" Width="100" Height="100" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Margin="5" Text="{Binding Title}" Style="{StaticResource BoxSubtitleStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" MaxLines="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="HOYItemSnapped">
+        <Grid Width="170" Height="165" Style="{StaticResource BoxGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Margin="5" Source="{Binding Icon}" Width="100" Height="100" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Margin="5" Text="{Binding Title}" Style="{StaticResource BoxSubtitleStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" MaxLines="1"/>
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>

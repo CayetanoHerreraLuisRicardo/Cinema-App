@@ -1,0 +1,10 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "LaButaca",
+      "Icon": "/Assets/DataImages/ModuleLogo-2.png",
+      "Target": "LaButacaPage"
+    }
+  ]
+}

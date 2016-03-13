@@ -1,0 +1,64 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "NOTICIAS DEL CINE",
+      "Icon": "/Assets/DataImages/ModuleLogo-5.png",
+      "Target": "NOTICIASDELCINEPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "NOTICIAS DE SERIES",
+      "Icon": "/Assets/DataImages/ModuleLogo-6.png",
+      "Target": "NOTICIASDESERIESPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "ESPECIALES",
+      "Icon": "/Assets/DataImages/ModuleLogo-7.png",
+      "Target": "ESPECIALESPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "ESTRENOS DE LA SEMANA",
+      "Icon": "/Assets/DataImages/ModuleLogo-9.png",
+      "Target": "ESTRENOSDELASEMANAPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "PELICULAS EN CARTELERA",
+      "Icon": "/Assets/DataImages/ModuleLogo-10.png",
+      "Target": "PELICULASENCARTELERAPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "TOP CRITICAS PRENSA",
+      "Icon": "/Assets/DataImages/ModuleLogo-11.png",
+      "Target": "TOPCRITICASPRENSAPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "TOP CRITICAS ESPECTADORES",
+      "Icon": "/Assets/DataImages/ModuleLogo-12.png",
+      "Target": "TOPCRITICASESPECTADORESPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "PROXIMOS ESTRENOS",
+      "Icon": "/Assets/DataImages/ModuleLogo-13.png",
+      "Target": "PROXIMOSESTRENOSPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "PELICULAS MAS VISTAS",
+      "Icon": "/Assets/DataImages/ModuleLogo-14.png",
+      "Target": "PELICULASMASVISTASPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "SERIES MAS VISTAS",
+      "Icon": "/Assets/DataImages/ModuleLogo-15.png",
+      "Target": "SERIESMASVISTASPage"
+    }
+  ]
+}

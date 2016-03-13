@@ -1,0 +1,75 @@
+<Application
+    x:Class="AppStudio.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStudio"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:common="using:AppStudio.Common"
+    xmlns:localData="using:Shared"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default" Source="Styles/DefaultTheme.xaml"/>
+            </ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/FontSizes.xaml"/>
+                <ResourceDictionary Source="Styles/AppTheme.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/PlatformStyles.xaml"/>
+                <!-- Application DataTemplate imports -->
+                <ResourceDictionary Source="Views/DataTemplates/SENSACINEViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/NOTICIASDELCINEViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/NOTICIASDESERIESViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ESPECIALESViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ESTRENOSDELASEMANAViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/PELICULASENCARTELERAViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TOPCRITICASPRENSAViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TOPCRITICASESPECTADORESViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/PROXIMOSESTRENOSViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/PELICULASMASVISTASViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/SERIESMASVISTASViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ELMULTICINEViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/GENERALViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ACTUALIDADViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/FESTIVALESViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/CORTOMETRAJESViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ESTRENOSViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/CRITICASViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/REPORTAJEESTRENOCRITICAViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/LaButacaViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/HOYViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ELSEPTIMOARTEViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TORRENTViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TodoCVCDViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/CONTACTOViews.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <x:String x:Key="AppName">Cinem-App</x:String>
+            <x:String x:Key="AppTitle">Cinem-App</x:String>
+
+            <!-- Html2Xaml -->
+            <html2xaml:Properties x:Key="Properties"/>
+
+            <!-- VariableSizedGrid -->
+            <controls:VariableSizedGrid x:Key="VariableSizedGrid"/>
+            <controls:RichTextColumns x:Key="RichTextColumns"/>
+
+            <!-- ItemClickCommand -->
+            <commands:ItemClickCommand x:Key="ItemClickCommand" />
+
+            <!-- Converters -->
+            <controls:VisibilityConverter x:Key="VisibilityConverter"/>
+            <controls:StringVisibilityConverter x:Key="StringVisibilityConverter"/>
+            <controls:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            <controls:GridLengthConverter x:Key="GridLengthConverter"/>
+
+            <!-- Action Commands -->
+            <local:ActionCommands x:Key="ActionCommands"/>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

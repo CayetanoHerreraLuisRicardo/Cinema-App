@@ -1,0 +1,10 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "EL SEPTIMO ARTE",
+      "Icon": "/Assets/DataImages/ModuleLogo.png",
+      "Target": "ELSEPTIMOARTEPage"
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8086921e-79ee-49b8-a51f-e3c52803aa62}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppStudio</RootNamespace>
+    <AssemblyName>AppStudio</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile></PackageCertificateKeyFile>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="Properties\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Views\DataTemplates\SENSACINEViews.xaml" />
+    <Content Include="Views\DataTemplates\NOTICIASDELCINEViews.xaml" />
+    <Content Include="Views\DataTemplates\NOTICIASDESERIESViews.xaml" />
+    <Content Include="Views\DataTemplates\ESPECIALESViews.xaml" />
+    <Content Include="Views\DataTemplates\ESTRENOSDELASEMANAViews.xaml" />
+    <Content Include="Views\DataTemplates\PELICULASENCARTELERAViews.xaml" />
+    <Content Include="Views\DataTemplates\TOPCRITICASPRENSAViews.xaml" />
+    <Content Include="Views\DataTemplates\TOPCRITICASESPECTADORESViews.xaml" />
+    <Content Include="Views\DataTemplates\PROXIMOSESTRENOSViews.xaml" />
+    <Content Include="Views\DataTemplates\PELICULASMASVISTASViews.xaml" />
+    <Content Include="Views\DataTemplates\SERIESMASVISTASViews.xaml" />
+    <Content Include="Views\DataTemplates\ELMULTICINEViews.xaml" />
+    <Content Include="Views\DataTemplates\GENERALViews.xaml" />
+    <Content Include="Views\DataTemplates\ACTUALIDADViews.xaml" />
+    <Content Include="Views\DataTemplates\FESTIVALESViews.xaml" />
+    <Content Include="Views\DataTemplates\CORTOMETRAJESViews.xaml" />
+    <Content Include="Views\DataTemplates\ESTRENOSViews.xaml" />
+    <Content Include="Views\DataTemplates\CRITICASViews.xaml" />
+    <Content Include="Views\DataTemplates\REPORTAJEESTRENOCRITICAViews.xaml" />
+    <Content Include="Views\DataTemplates\LaButacaViews.xaml" />
+    <Content Include="Views\DataTemplates\HOYViews.xaml" />
+    <Content Include="Views\DataTemplates\ELSEPTIMOARTEViews.xaml" />
+    <Content Include="Views\DataTemplates\TORRENTViews.xaml" />
+    <Content Include="Views\DataTemplates\TodoCVCDViews.xaml" />
+    <Content Include="Views\DataTemplates\CONTACTOViews.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\AppFlyouts\PrivacyFlyout.xaml.cs">
+      <DependentUpon>PrivacyFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDELCINEPage.xaml.cs">
+      <DependentUpon>NOTICIASDELCINEPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDESERIESPage.xaml.cs">
+      <DependentUpon>NOTICIASDESERIESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESPECIALESPage.xaml.cs">
+      <DependentUpon>ESPECIALESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSDELASEMANAPage.xaml.cs">
+      <DependentUpon>ESTRENOSDELASEMANAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASENCARTELERAPage.xaml.cs">
+      <DependentUpon>PELICULASENCARTELERAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASPRENSAPage.xaml.cs">
+      <DependentUpon>TOPCRITICASPRENSAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASESPECTADORESPage.xaml.cs">
+      <DependentUpon>TOPCRITICASESPECTADORESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PROXIMOSESTRENOSPage.xaml.cs">
+      <DependentUpon>PROXIMOSESTRENOSPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASMASVISTASPage.xaml.cs">
+      <DependentUpon>PELICULASMASVISTASPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SERIESMASVISTASPage.xaml.cs">
+      <DependentUpon>SERIESMASVISTASPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GENERALPage.xaml.cs">
+      <DependentUpon>GENERALPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ACTUALIDADPage.xaml.cs">
+      <DependentUpon>ACTUALIDADPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FESTIVALESPage.xaml.cs">
+      <DependentUpon>FESTIVALESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CORTOMETRAJESPage.xaml.cs">
+      <DependentUpon>CORTOMETRAJESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSPage.xaml.cs">
+      <DependentUpon>ESTRENOSPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CRITICASPage.xaml.cs">
+      <DependentUpon>CRITICASPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaButacaPage.xaml.cs">
+      <DependentUpon>LaButacaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ELSEPTIMOARTEPage.xaml.cs">
+      <DependentUpon>ELSEPTIMOARTEPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TodoCVCDPage.xaml.cs">
+      <DependentUpon>TodoCVCDPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDELCINEList.xaml.cs">
+      <DependentUpon>NOTICIASDELCINEList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDESERIESList.xaml.cs">
+      <DependentUpon>NOTICIASDESERIESList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESPECIALESList.xaml.cs">
+      <DependentUpon>ESPECIALESList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSDELASEMANAList.xaml.cs">
+      <DependentUpon>ESTRENOSDELASEMANAList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASENCARTELERAList.xaml.cs">
+      <DependentUpon>PELICULASENCARTELERAList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASPRENSAList.xaml.cs">
+      <DependentUpon>TOPCRITICASPRENSAList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASESPECTADORESList.xaml.cs">
+      <DependentUpon>TOPCRITICASESPECTADORESList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PROXIMOSESTRENOSList.xaml.cs">
+      <DependentUpon>PROXIMOSESTRENOSList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASMASVISTASList.xaml.cs">
+      <DependentUpon>PELICULASMASVISTASList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SERIESMASVISTASList.xaml.cs">
+      <DependentUpon>SERIESMASVISTASList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDELCINEDetailPage.xaml.cs">
+      <DependentUpon>NOTICIASDELCINEDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NOTICIASDESERIESDetailPage.xaml.cs">
+      <DependentUpon>NOTICIASDESERIESDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESPECIALESDetailPage.xaml.cs">
+      <DependentUpon>ESPECIALESDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSDELASEMANADetailPage.xaml.cs">
+      <DependentUpon>ESTRENOSDELASEMANADetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASENCARTELERADetailPage.xaml.cs">
+      <DependentUpon>PELICULASENCARTELERADetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASPRENSADetailPage.xaml.cs">
+      <DependentUpon>TOPCRITICASPRENSADetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TOPCRITICASESPECTADORESDetailPage.xaml.cs">
+      <DependentUpon>TOPCRITICASESPECTADORESDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PROXIMOSESTRENOSDetailPage.xaml.cs">
+      <DependentUpon>PROXIMOSESTRENOSDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PELICULASMASVISTASDetailPage.xaml.cs">
+      <DependentUpon>PELICULASMASVISTASDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SERIESMASVISTASDetailPage.xaml.cs">
+      <DependentUpon>SERIESMASVISTASDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GENERALList.xaml.cs">
+      <DependentUpon>GENERALList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ACTUALIDADList.xaml.cs">
+      <DependentUpon>ACTUALIDADList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FESTIVALESList.xaml.cs">
+      <DependentUpon>FESTIVALESList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CORTOMETRAJESList.xaml.cs">
+      <DependentUpon>CORTOMETRAJESList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSList.xaml.cs">
+      <DependentUpon>ESTRENOSList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CRITICASList.xaml.cs">
+      <DependentUpon>CRITICASList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GENERALDetailPage.xaml.cs">
+      <DependentUpon>GENERALDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ACTUALIDADDetailPage.xaml.cs">
+      <DependentUpon>ACTUALIDADDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FESTIVALESDetailPage.xaml.cs">
+      <DependentUpon>FESTIVALESDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CORTOMETRAJESDetailPage.xaml.cs">
+      <DependentUpon>CORTOMETRAJESDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ESTRENOSDetailPage.xaml.cs">
+      <DependentUpon>ESTRENOSDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CRITICASDetailPage.xaml.cs">
+      <DependentUpon>CRITICASDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaButacaList.xaml.cs">
+      <DependentUpon>LaButacaList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaButacaDetailPage.xaml.cs">
+      <DependentUpon>LaButacaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ELSEPTIMOARTEList.xaml.cs">
+      <DependentUpon>ELSEPTIMOARTEList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ELSEPTIMOARTEDetailPage.xaml.cs">
+      <DependentUpon>ELSEPTIMOARTEDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TodoCVCDList.xaml.cs">
+      <DependentUpon>TodoCVCDList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TodoCVCDDetailPage.xaml.cs">
+      <DependentUpon>TodoCVCDDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CONTACTOList.xaml.cs">
+      <DependentUpon>CONTACTOList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CONTACTODetailPage.xaml.cs">
+      <DependentUpon>CONTACTODetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AppFlyouts\PrivacyFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDELCINEPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDESERIESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESPECIALESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSDELASEMANAPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASENCARTELERAPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASPRENSAPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASESPECTADORESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PROXIMOSESTRENOSPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASMASVISTASPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SERIESMASVISTASPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GENERALPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ACTUALIDADPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FESTIVALESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CORTOMETRAJESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CRITICASPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaButacaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ELSEPTIMOARTEPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TodoCVCDPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDELCINEList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDESERIESList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESPECIALESList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSDELASEMANAList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASENCARTELERAList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASPRENSAList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASESPECTADORESList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PROXIMOSESTRENOSList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASMASVISTASList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SERIESMASVISTASList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDELCINEDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NOTICIASDESERIESDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESPECIALESDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSDELASEMANADetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASENCARTELERADetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASPRENSADetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TOPCRITICASESPECTADORESDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PROXIMOSESTRENOSDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PELICULASMASVISTASDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SERIESMASVISTASDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GENERALList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ACTUALIDADList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FESTIVALESList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CORTOMETRAJESList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CRITICASList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GENERALDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ACTUALIDADDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FESTIVALESDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CORTOMETRAJESDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ESTRENOSDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CRITICASDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaButacaList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaButacaDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ELSEPTIMOARTEList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ELSEPTIMOARTEDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TodoCVCDList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TodoCVCDDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CONTACTOList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CONTACTODetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\PlatformStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Reference Include="AppStudio.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AppStudio.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppStudio.Data\AppStudio.Data.csproj">
+      <Project>{573521ce-55ff-4697-acf6-64a239a8fb22}</Project>
+      <Name>AppStudio.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\AppStudio.Shared\AppStudio.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
